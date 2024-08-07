@@ -10,7 +10,7 @@ let startButton, nextButton, cueButton;
 let showCue = false;
 
 function preload() {
-  img = loadImage('pic/bg.webp');
+  img = loadImage('pic/bg.png');
   puz = loadImage('pic/puzzle1.jpg');
 }
 
@@ -72,6 +72,7 @@ function draw() {
     textAlign(CENTER, CENTER);
     text('Two more pieces to get!', width / 2, height / 2 -50);
     text('Drag the pieces and release with mouse.', width / 2, height / 2 + 25);
+    text('Time is unlimited. You can enjoy solving all the mysteries!', width / 2, height / 2 + 100);
   } else if (state === 'game') {
     if (showCue) {
       image(puz, width / 2 - pieceSize * 1.5, height / 2 - pieceSize * 1.5, pieceSize * 3, pieceSize * 3);

@@ -24,7 +24,7 @@ function setup() {
   }
 
   startButton = createButton('Start');
-  startButton.position(width / 2 - 50, height / 2 + 100);
+  startButton.position(width / 2 - 50, height / 2 + 200);
   startButton.size(100, 50);
   startButton.mousePressed(startGame);
 
@@ -44,7 +44,7 @@ function setup() {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
   pieceSize = min(width / 5, height / 5); // adjust the scale of every piece
-  startButton.position(width / 2 - 50, height / 2 + 150);
+  startButton.position(width / 2 - 50, height / 2 + 100);
   nextButton.position(width / 2 - 50, height - 75);
   cueButton.position(width - 100, 50);
 }
@@ -66,7 +66,7 @@ function toggleCue() {
 function draw() {
   background(255);
   if (state === 'start') {
-    image(img, 25, height / 2, 300, 300);
+    image(img, 100, height / 2, 300, 300);
     textSize(24);
     fill(0);
     textAlign(CENTER, CENTER);
